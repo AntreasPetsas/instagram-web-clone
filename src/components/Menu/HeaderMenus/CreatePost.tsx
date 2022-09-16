@@ -1,11 +1,10 @@
 import React from 'react';
 
-function Explore() {
+function CreatePost() {
     return (
       <>
       </>
     );
   }
   
-  export default Explore;
-  
+  export default CreatePost;
