@@ -1,10 +1,10 @@
 import React from 'react';
 
 function FeedCard() {
-    return (
-      <>
-      </>
-    );
-  }
-  
-  export default FeedCard;
+  return (
+    <div id="feed_card">
+    </div>
+  );
+}
+
+export default FeedCard;

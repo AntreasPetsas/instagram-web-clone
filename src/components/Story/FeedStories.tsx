@@ -1,10 +1,10 @@
 import React from 'react';
 
 function FeedStories() {
-    return (
-      <>
-      </>
-    );
-  }
-  
-  export default FeedStories;
+  return (
+    <div id="feed_stories">
+    </div>
+  );
+}
+
+export default FeedStories;

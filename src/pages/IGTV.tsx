@@ -1,11 +1,10 @@
 import React from 'react';
 
 function IGTV() {
-    return (
-      <>
-      </>
-    );
-  }
-  
-  export default IGTV;
-  
+  return (
+    <div id="igtv-page">
+    </div>
+  );
+}
+
+export default IGTV;

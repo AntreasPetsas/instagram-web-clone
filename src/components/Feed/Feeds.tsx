@@ -1,10 +1,10 @@
 import React from 'react';
 
 function Feeds() {
-    return (
-      <>
-      </>
-    );
-  }
-  
-  export default Feeds;
+  return (
+    <div id="feeds">
+    </div>
+  );
+}
+
+export default Feeds;

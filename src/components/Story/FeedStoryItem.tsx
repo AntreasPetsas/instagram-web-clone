@@ -3,8 +3,8 @@ import React from 'react';
 
 function FeedStoryItem() {
     return (
-      <>
-      </>
+      <div id="feed_story-item">
+    </div>
     );
   }
   
