@@ -2,8 +2,8 @@ import React from 'react';
 
 function Rightside() {
   return (
-    <div id="rightside-layout">
-    </div>
+    <section id="rightside-layout">
+    </section>
   );
 }
 

@@ -2,8 +2,8 @@ import React from 'react';
 
 function LeftSideMenuItem() {
   return (
-    <div id="leftside_menu-item">
-    </div>
+    <section id="leftside_menu-item">
+    </section>
   );
 }
 

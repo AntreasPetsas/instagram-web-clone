@@ -6,10 +6,10 @@ type FeedProps = {
 };
 
 function Feed(props: FeedProps) {
-  return <div id="feed-page">
-    {props.id}
-    {props.name}
-  </div>;
+  return <section id="feed-page">
+    <p>{props.id}</p>
+    <p>{props.name}</p>
+  </section>;
 }
 
 export default Feed;

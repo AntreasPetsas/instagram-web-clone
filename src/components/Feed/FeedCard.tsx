@@ -2,8 +2,8 @@ import React from 'react';
 
 function FeedCard() {
   return (
-    <div id="feed_card">
-    </div>
+    <section id="feed_card">
+    </section>
   );
 }
 

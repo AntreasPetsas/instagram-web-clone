@@ -2,8 +2,8 @@ import React from 'react';
 
 function Stats() {
   return (
-    <div id="stats-page">
-    </div>
+    <section id="stats-page">
+    </section>
   );
 }
 

@@ -2,8 +2,8 @@ import React from 'react';
 
 function Explore() {
   return (
-    <div id="explore-page">
-    </div>
+    <section id="explore-page">
+    </section>
   );
 }
 

@@ -2,14 +2,15 @@ import React from 'react';
 import Header from './Header';
 import LeftSidebar from './Leftside';
 import RightSidebar from './Rightside';
+import {Outlet} from 'react-router-dom';
 
-function AuthLayout(children: any) {
+function AuthLayout() {
     return (
         <>
             <Header />
             <LeftSidebar />
             <RightSidebar />
-            {children}
+            <Outlet />
         </>
     );
 }

@@ -2,8 +2,8 @@ import React from 'react';
 
 function CreatePost() {
   return (
-    <div id="createpost">
-    </div>
+    <section id="createpost">
+    </section>
   );
 }
 

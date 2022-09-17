@@ -2,8 +2,8 @@ import React from 'react';
 
 function Content() {
   return (
-    <div id="content-layout">
-    </div>
+    <section id="content-layout">
+    </section>
   );
 }
 

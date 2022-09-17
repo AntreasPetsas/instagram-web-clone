@@ -2,8 +2,8 @@ import React from 'react';
 
 function IGTV() {
   return (
-    <div id="igtv-page">
-    </div>
+    <section id="igtv-page">
+    </section>
   );
 }
 

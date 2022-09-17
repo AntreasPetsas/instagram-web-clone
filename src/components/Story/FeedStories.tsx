@@ -2,8 +2,8 @@ import React from 'react';
 
 function FeedStories() {
   return (
-    <div id="feed_stories">
-    </div>
+    <section id="feed_stories">
+    </section>
   );
 }
 
