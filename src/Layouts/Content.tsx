@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Content() {
+function Content({children}: {children: any}) {
   return (
     <section id="content-layout">
+      {children}
     </section>
   );
 }

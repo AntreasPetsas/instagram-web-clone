@@ -10,3 +10,9 @@ Current stack used:
 - npm v.8.15.0
 - React v18.2.0
 - Typescript v4.8.3
+
+
+
+Illustrations/ Icons sources
+- https://www.flaticon.com/
+- https://undraw.co/

@@ -1,12 +1,16 @@
-// the story circle on the feed on feedstories.tsx component
 import React from 'react';
+import Col from "react-bootstrap/Col";
+import profile from "../../assets/images/draft/profile.svg";
 
 function FeedStoryItem() {
-    return (
-      <section id="feed_story-item">
-    </section>
-    );
-  }
-  
-  export default FeedStoryItem;
-  
+  return (
+    <Col className="feed_story-item" xs={2}>
+      <img src={profile} width="64" height="64" alt="Andreas story" />
+      <label>
+        Andreas
+      </label>
+    </Col>
+  );
+}
+
+export default FeedStoryItem;

@@ -13,11 +13,11 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<AuthLayout />}>
+      {/* <Route path='/' element={<AuthLayout />}> */}
         {/* <Route index element={<Home />} /> */}
-        <Route path='feeds' element={<Feed id={3} name="Helloooo World" />} />
+        <Route path='feeds' element={<AuthLayout><Feed id={3} name="Helloooo World" /></AuthLayout>} />
         {/* <Route path='*' element={<Error />} /> */}
-      </Route>
+      {/* </Route> */}
     </Routes>
   </BrowserRouter>
   );
