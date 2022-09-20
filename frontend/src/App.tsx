@@ -3,7 +3,9 @@ import {
   BrowserRouter,
   Routes,
   Route,
-} from "react-router-dom"; import AuthLayout from './Layouts/AuthLayout';
+  Navigate
+} from "react-router-dom";
+import AuthLayout from './Layouts/AuthLayout';
 import Feed from './pages/Feed';
 
 import './App.css';
@@ -15,7 +17,9 @@ function App() {
     <Routes>
       {/* <Route path='/' element={<AuthLayout />}> */}
         {/* <Route index element={<Home />} /> */}
-        <Route path='feeds' element={<AuthLayout><Feed id={3} name="Helloooo World" /></AuthLayout>} />
+        <Route path='/feeds' element={<AuthLayout><Feed id={3} name="Helloooo World" /></AuthLayout>} />
+        <Route path="*" element={<Navigate to="/feeds" replace />}
+    />
         {/* <Route path='*' element={<Error />} /> */}
       {/* </Route> */}
     </Routes>
