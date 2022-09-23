@@ -1,0 +1,39 @@
+/* @import noAuthImage from "../assets/images/noauthimage.jpg"; */
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../images/noauthimage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#noAuth_layout{
+    display: flex;
+    flex-direction: column;
+    grid-column-start: colInner1;
+    grid-column-end: colInner2;
+    grid-row-start: row2;
+    grid-row-end: rowInner;
+    background-color: white;
+    border-radius: 4px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    text-align: center;
+}
+
+form label{
+    justify-content: center;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
