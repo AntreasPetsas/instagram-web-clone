@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { leftsideMenuItems } from "../../../constants/routes";
 
 function LeftSideMenuItems() {
-  console.log(leftsideMenuItems)
 
   return (
     <section id="leftside_menu-items">
