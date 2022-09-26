@@ -20,6 +20,10 @@
     border-radius: 4px;
 }
 
+#noAuth_layout form span{
+    font-size: 14px;
+}
+
 form{
     display: flex;
     flex-direction: column;

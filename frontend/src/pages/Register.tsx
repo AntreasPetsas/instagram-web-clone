@@ -1,5 +1,5 @@
 import { MutableRefObject, useRef, useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, FloatingLabel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import logo from "../assets/images/logo.png";
@@ -16,6 +16,8 @@ const Register = () => {
   const handleRegister = async (
     event: React.MouseEvent<HTMLElement> | React.FormEvent
   ) => {
+    event.preventDefault();
+
     const response = await fetch("/users/register", {
       method: "POST",
       headers: {
@@ -26,43 +28,44 @@ const Register = () => {
         password: passwordRef.current.value,
       }),
     });
-    const body = await response.text();
   };
 
   return (
     <>
-      <img src={logo} width="" height="" alt="instagram logo" />
+      <img src={logo} width="auto" height="" alt="instagram logo" />
       <Form onSubmit={(e) => handleRegister(e)}>
         <Form.Group className="d-flex">
-          <Form.Label id="username">Username</Form.Label>
-          <Form.Control
-            type="username"
-            name="username"
-            value={formData.username}
-            onChange={(e) =>
-              setFormData((prevState) => ({
-                ...prevState,
-                username: e.target.value,
-              }))
-            }
-            ref={usernameRef}
-          />
+          <FloatingLabel controlId="username" label="Username" className="mb-3">
+            <Form.Control
+              type="username"
+              placeholder="Mary Poppins"
+              value={formData.username}
+              onChange={(e) =>
+                setFormData((prevState) => ({
+                  ...prevState,
+                  username: e.target.value,
+                }))
+              }
+              ref={usernameRef}
+            />
+          </FloatingLabel>
         </Form.Group>
 
         <Form.Group className="d-flex">
-          <Form.Label id="password">Password</Form.Label>
-          <Form.Control
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={(e) =>
-              setFormData((prevState) => ({
-                ...prevState,
-                password: e.target.value,
-              }))
-            }
-            ref={passwordRef}
-          />
+          <FloatingLabel controlId="password" label="Password" className="mb-3">
+            <Form.Control
+              type="password"
+              placeholder="Secure Password"
+              value={formData.password}
+              onChange={(e) =>
+                setFormData((prevState) => ({
+                  ...prevState,
+                  password: e.target.value,
+                }))
+              }
+              ref={passwordRef}
+            />
+          </FloatingLabel>
         </Form.Group>
 
         <Button
