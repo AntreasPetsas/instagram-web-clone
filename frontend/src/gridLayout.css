@@ -1,60 +1,37 @@
-#root{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-columns: [colstart] 5% [col1] 10% [col2] 5% [col3] 5% [col4] 5% [col5] 7% [colInner1] 21% [colInner2] 7% [col6] 5% [col7] 5% [col8] 25% [colend];
-    grid-template-rows: [rowstart] 10% [row1] 5% [row2] 15% [row3] 10% [row4] 5% [row5] 30% [rowInner] 25% [rowend];
+#root {
+  display: grid;
+  grid-template-columns: [colstart] 5% [col1] 10% [col2] 5% [col3] 5% [col4] 5% [col5] 7% [colInner1] 21% [colInner2] 7% [col6] 5% [col7] 10% [col8] 20% [colend];
+  grid-template-rows: [rowstart] 10% [row1] 5% [row2] 15% [row3] 10% [row4] 5% [row5] 30% [rowInner] 25% [rowend];
 }
 
 /* right side */
-#rightside-layout{
-    grid-column-start: col8;
-    grid-column-end: colend;
-    grid-row-start: row1;
-    grid-row-end: rowend;
+#rightside-layout {
+  grid-column-start: col8;
+  grid-column-end: colend;
+  grid-row-start: row1;
+  grid-row-end: rowend;
 }
 
 /* header */
-#header-layout{
-    grid-column-start: col3;
-    grid-column-end: colend;
-    grid-row-start: rowstart;
-    grid-row-end: row1;
+#header-layout {
+  grid-column-start: colstart;
+  grid-column-end: colend;
+  grid-row-start: rowstart;
+  grid-row-end: row1;
 }
-#header-layout_left{
-    grid-column-start: col3;
-    grid-column-end: col8;
-}
-#header-layout_right{
-    grid-column-start: col8;
-    grid-column-end: colend;
-}
-
 
 /* main content*/
-#content-layout{
-    grid-column-start: col3;
-    grid-column-end: col8;
-    grid-row-start: row1;
-    grid-row-end: rowend;
+#content-layout {
+  grid-column-start: col3;
+  grid-column-end: col8;
+  grid-row-start: row1;
+  grid-row-end: rowend;
 }
-
 
 /* left side */
-#leftside-layout{
-    grid-column-start: colstart;
-    grid-column-end: col3;
-    grid-row-start: rowstart;
-    grid-row-end: rowend;
-}
-#profile-details{
-    grid-column-start: colstart;
-    grid-column-end: col3;
-    grid-row-start: rowstart;
-    grid-row-end: row5;
-}
-#leftside_menu-items{
-    grid-column-start: colstart;
-    grid-column-end: col3;
-    grid-row-start: row5;
-    grid-row-end: rowend;
+#leftside-layout {
+  grid-column-start: colstart;
+  grid-column-end: col3;
+  grid-row-start: rowstart;
+  grid-row-end: rowend;
 }

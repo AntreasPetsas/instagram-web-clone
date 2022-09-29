@@ -10,18 +10,18 @@ function TrendingFeeds() {
   return (
     <>
       <h3>Trending Feeds</h3>
-      <Row>
+      <Row className="images">
         <Col xs={6}>
-          <img src={beach} width="100" height="100" alt="beach time" />
+          <img src={beach} width="125" height="125" alt="beach time" />
         </Col>
         <Col xs={6}>
-          <img src={traveling} width="100" height="100" alt="traveling time" />
+          <img src={traveling} width="125" height="125" alt="traveling time" />
         </Col>
         <Col xs={6}>
-          <img src={cooking} width="100" height="100" alt="cooking time" />
+          <img src={cooking} width="125" height="125" alt="cooking time" />
         </Col>
         <Col xs={6}>
-          <img src={summer} width="100" height="100" alt="summer time" />
+          <img src={summer} width="125" height="125" alt="summer time" />
         </Col>
       </Row>
     </>

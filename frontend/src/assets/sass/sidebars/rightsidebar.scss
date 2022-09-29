@@ -1,0 +1,42 @@
+#rightside-layout {
+  padding-right: 30px;
+  padding-left: 30px;
+  h3 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .images{
+    img{
+        background-color: #252739;
+        border-radius: 12px;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+  }
+  .row, .col-6{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#suggestions{
+    gap: 15px;
+    img{
+        background-color: #ff00c8;
+        border-radius: 50%;
+        margin-right: 7px;
+    }
+    .labes_name{
+        color: black;
+        font-weight: 500;
+    }
+    .labes_place{
+        color: gray;
+        font-weight: 300;
+    }
+}

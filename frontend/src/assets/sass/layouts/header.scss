@@ -1,0 +1,43 @@
+#header-layout {
+  .inner {
+    display: grid;
+    grid-template-columns: [colstart] 5% [col1] 10% [col2] 5% [col3] 5% [col4] 5% [col5] 7% [colInner1] 21% [colInner2] 7% [col6] 5% [col7] 10% [col8] 20% [colend];
+  }
+}
+
+#header-layout_left {
+  grid-column-start: col4;
+  grid-column-end: col8;
+}
+#header-layout_right {
+  grid-column-start: col8;
+  grid-column-end: colend;
+}
+
+.headerSearch_wrapper {
+  border-radius: 10px;
+  border: 1px solid #808080ff;
+  background-color: #80808099;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+#header-layout_left button {
+  align-self: center;
+  height: fit-content;
+  background: rgb(150, 0, 255);
+  background: linear-gradient(
+    54deg,
+    rgba(150, 0, 255, 1) 0%,
+    rgba(255, 0, 200, 1) 50%,
+    rgba(255, 153, 0, 1) 100%
+  );
+  color: white;
+  border: none;
+
+  #createpost {
+    display: flex;
+    align-items: center;
+  }
+}

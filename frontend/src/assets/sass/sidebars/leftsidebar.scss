@@ -1,0 +1,62 @@
+#leftside-layout {
+  display: grid;
+  grid-template-rows: [rowstart] 10% [row1] 5% [row2] 15% [row3] 10% [row4] 5% [row5] 30% [rowInner] 25% [rowend];
+
+	#logo{
+		grid-row-start: rowstart;
+    grid-row-end: row1;
+	}
+
+  #profile-details {
+    grid-row-start: row1;
+    grid-row-end: row4;
+  }
+  #leftside_menu-items {
+    grid-row-start: row4;
+    grid-row-end: rowend;
+  }
+}
+
+#leftside-layout {
+  color: gray;
+  p {
+    color: inherit;
+  }
+
+  #profile-details {
+    .profile-details__image .col:first-child {
+      align-self: center;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 255, 1) 0%,
+        rgba(150, 0, 255, 1) 25%,
+        rgba(255, 0, 200, 1) 50%,
+        rgba(255, 150, 0, 1) 75%,
+        rgba(255, 255, 0, 1) 100%
+      );
+      display: inline-block;
+      border-radius: 50%;
+      width: fit-content;
+      padding: 0;
+
+      img {
+        border-radius: 50%;
+        background: white;
+        margin: 3px;
+      }
+    }
+  }
+
+  .leftside_menu-item {
+    margin-left: 35px;
+    color: inherit;
+
+    p {
+      margin-left: 15px;
+    }
+  }
+
+  .leftside_menu-item:hover {
+    color: magenta;
+  }
+}

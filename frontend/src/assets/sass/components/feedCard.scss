@@ -1,0 +1,13 @@
+.feed_card {
+  background: white;
+  border-radius: 12px;
+  width: 800px !important;
+  height: 400px;
+  margin-bottom: 45px;
+  .feed_card-img {
+    width: 200px;
+  }
+}
+#feeds .row:nth-child(2) {
+  justify-content: center;
+}

@@ -1,15 +1,16 @@
-import React from 'react';
-import Col from "react-bootstrap/Col";
 import profile from "../../assets/images/draft/profile.svg";
+import add from "../../assets/images/icons/add.png";
 
-function FeedStoryItem() {
+function FeedStoryItem({isFirst=false}:{isFirst?: Boolean}) {
   return (
-    <Col className="feed_story-item" xs={2}>
-      <img src={profile} width="64" height="64" alt="Andreas story" />
-      <label>
-        Andreas
-      </label>
-    </Col>
+    <div className="feed_story-item">
+      <figure>
+        {!isFirst && <img src={profile} width="86" height="86" alt="Andreas story" />}
+        {isFirst && <img src={add} width="86" height="86" alt="Add story" />}
+      </figure>
+      {!isFirst &&<label>Andreas</label>}
+      {isFirst &&<label>Add Story</label>}
+    </div>
   );
 }
 

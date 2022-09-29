@@ -4,7 +4,7 @@ import directIcon from "../../../assets/images/icons/direct.png";
 function Direct() {
   return (
     <div id="direct">
-      <img src={directIcon} width="24" height="24" alt="notifications icon" />
+      <img src={directIcon} width="20" height="20" alt="notifications icon" />
     </div>
   );
 }

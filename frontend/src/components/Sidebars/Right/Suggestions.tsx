@@ -1,26 +1,32 @@
-import React from "react"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
+import React from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import profile from "../../../assets/images/draft/profile.svg";
 
 function Suggestions() {
   return (
-    <Row>
+    <Row id="suggestions">
       <h3>Suggestions for you</h3>
-      <Col className="d-flex">
-        <img src={profile} width="32" height="32" alt="suggestion 1" />
-        <label>Andreas Petsas</label>
-        <label>California, US</label>
+      <Col xs={12} className="d-flex">
+        <img src={profile} width="48" height="48" alt="suggestion 1" />
+        <div className="labels d-flex flex-column">
+          <label className="labes_name">Andreas Petsas</label>
+          <label className="labes_place">California, US</label>
+        </div>
       </Col>
-      <Col className="d-flex">
-        <img src={profile} width="32" height="32" alt="suggestion 2" />
-        <label>Andreas Petsas</label>
-        <label>California, US</label>
+      <Col xs={12} className="d-flex">
+        <img src={profile} width="48" height="48" alt="suggestion 2" />
+        <div className="labels d-flex flex-column">
+          <label className="labes_name">Andreas Petsas</label>
+          <label className="labes_place">California, US</label>
+        </div>
       </Col>
-      <Col className="d-flex">
-        <img src={profile} width="32" height="32" alt="suggestion 3" />
-        <label>Andreas Petsas</label>
-        <label>California, US</label>
+      <Col xs={12} className="d-flex">
+        <img src={profile} width="48" height="48" alt="suggestion 3" />
+        <div className="labels d-flex flex-column">
+          <label className="labes_name">Andreas Petsas</label>
+          <label className="labes_place">California, US</label>
+        </div>
       </Col>
     </Row>
   );

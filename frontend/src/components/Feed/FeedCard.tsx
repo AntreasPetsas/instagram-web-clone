@@ -1,15 +1,12 @@
-import React from 'react';
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import profile from "../../assets/images/draft/profile.svg";
 import feed from "../../assets/images/draft/feed.svg";
-
 import like from "../../assets/images/icons/like.png";
 import comment from "../../assets/images/icons/comment.png";
 import share from "../../assets/images/icons/share.png";
 import bookmark from "../../assets/images/icons/bookmark.png";
+import "../../assets/sass/components/feedCard.scss"
 
 function FeedCard() {
   return (
@@ -27,7 +24,7 @@ function FeedCard() {
         </Col>
       </Row>
       <Row>
-        <img src={feed} width="auto" height="200" alt="feed card brief description" />
+        <img className="feed_card-img" src={feed} width="200" height="200" alt="feed card brief description" />
       </Row>
       <Row>
         <Col xs={3}>

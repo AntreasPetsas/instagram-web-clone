@@ -4,7 +4,7 @@ import notificationsIcon from "../../../assets/images/icons/notifications.png";
 function Notifications() {
   return (
     <div id="notifications">
-      <img src={notificationsIcon} width="24" height="24" alt="notifications icon" />
+      <img src={notificationsIcon} width="20" height="20" alt="notifications icon" />
     </div>
   );
 }

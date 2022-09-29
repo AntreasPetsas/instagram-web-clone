@@ -1,22 +1,19 @@
 @import url("./gridLayout.css");
 @import url("bootstrap/dist/css/bootstrap.min.css");
 
-#content-layout{
-    background-color: #f5e5f5;
-}
-#header-layout{
-    background-color: #2e2e2e;
-}
-#leftside-layout{
-    background-color: #8f8f8f;
-}
+#header-layout,
+#leftside-layout,
 #rightside-layout{
-    background-color: #6e6e6e;
+    background-color: white;
+}
+
+#content-layout{
+    background-color: gray;
 }
 #leftside_menu-items{
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 4px;
 }
 
 

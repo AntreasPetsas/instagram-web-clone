@@ -11,8 +11,8 @@ function LeftSideMenuItems() {
           {<>
               <img
                 src={Object.values(item.icon)[0]}
-                height="24"
-                width="24"
+                height="20"
+                width="20"
                 alt={`${item.name}`}
               />
               <p>

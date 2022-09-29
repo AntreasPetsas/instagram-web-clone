@@ -1,5 +1,5 @@
 import {Outlet} from 'react-router-dom';
-import '../assets/sass/noauth.css';
+import '../assets/sass/noauth.scss';
 
 function NoAuthLayout({children}:{children: any}) {
     return (
