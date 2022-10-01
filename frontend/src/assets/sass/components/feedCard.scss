@@ -1,13 +1,85 @@
 .feed_card {
   background: white;
   border-radius: 12px;
-  width: 800px !important;
-  height: 400px;
+  // height: 600px;
   margin-bottom: 45px;
+  padding: 20px 45px 0 45px !important;
+
+  .feed_card-header,
+  .feed_card-content,
+  .feed_card-actions,
+  .feed_card-info,
+  .feed_card-comments {
+    margin-bottom: 25px;
+  }
+
+  .feed_card-actions {
+    .feed_card-actionslikes,
+    .feed_card-actionsComments,
+    .feed_card-actionsShares,
+    .feed_card-actionsSaved {
+      display: flex;
+      align-items: center;
+      label {
+        margin-left: 8px;
+      }
+    }
+    .feed_card-actionslikes {
+      justify-content: flex-start;
+    }
+    .feed_card-actionsComments {
+      justify-content: center;
+    }
+    .feed_card-actionsShares {
+      justify-content: center;
+    }
+    .feed_card-actionsSaved {
+      justify-content: flex-end;
+    }
+  }
+
   .feed_card-img {
-    width: 200px;
+    background-color: black;
+    border-radius: 10px;
+  }
+  .feed_card-profile,
+  .feed_card-profile img {
+    border-radius: 50%;
+  }
+
+  .feed_card-info {
+    padding-top: 15px;
+    border-top: 1px solid #d3d3d3;
   }
 }
 #feeds .row:nth-child(2) {
   justify-content: center;
+}
+
+.feed_card-comments {
+  &.row{
+    row-gap: 25px;
+  }
+  .feed_card-comment {
+    height: 100%;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+    background-color: #d3d3d3ff;
+    border: #d3d3d377;
+
+    .form-control,
+    .form-control:disabled {
+      margin-left: 6px;
+      background-color: transparent;
+      border: none;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }

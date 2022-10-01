@@ -11,7 +11,7 @@ type FeedProps = {
 
 function Feed(props: FeedProps) {
   return (
-    <Container id="feed-page">
+    <Container id="feed-page" style={{width: 800}}>
       <Row>
         <Col xs={6}>
           <h3>Stories</h3>
