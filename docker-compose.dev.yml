@@ -1,0 +1,162 @@
+version: "3.8"
+services:
+
+  admin:
+    restart: always
+    build:
+      context: admin
+      dockerfile: Dockerfile
+      target: dev
+    container_name: octta-admin
+    image: octta-admin
+    env_file:
+      - ./admin/.env
+    volumes:
+      - admin-node-modules:/usr/src/platform/admin/node_modules
+      - ./admin:/usr/src/platform/admin
+    ports:
+      - 3001:3000
+    networks:
+      - admin
+      - platform
+    healthcheck:
+      test: ["CMD", "wget", "-c", "localhost:3000", "-O", "/dev/null"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  api:
+    restart: always
+    build:
+      context: backend
+      dockerfile: Dockerfile
+      target: dev-api
+    container_name: octta-api
+    image: octta-api
+    volumes:
+      - api-source-code:/usr/src/platform/backend/
+    ports:
+      - 5002:5000
+    networks:
+      - api
+      - platform
+    depends_on:
+      - db-init
+      - mssql
+      - redis
+    healthcheck:
+      test: ["CMD", "wget", "-c", "localhost:5000/api/v1/system/healthcheck", "-O", "/dev/null"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+  
+  background:
+    restart: always
+    build:
+      context: backend
+      dockerfile: Dockerfile
+      target: dev-background
+    container_name: octta-background
+    image: octta-background
+    volumes:
+      - background-source-code:/usr/src/platform/backend/
+    ports:
+      - 5001:5001
+    networks:
+      - background
+      - platform
+    depends_on:
+      - db-init
+      - mssql
+      - redis
+    healthcheck:
+      test: ["CMD", "wget", "-c", "localhost:5001", "-O", "/dev/null"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  db-init:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+      target: dev-db-init
+    container_name: octta-db-init
+    image: octta-db-init
+    networks:
+      - platform
+    depends_on:
+      - mssql
+
+  frontend:
+    restart: always
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+      target: dev
+    container_name: octta-frontend
+    image: octta-frontend
+    env_file:
+      - ./frontend/.env
+    volumes:
+      - frontend-node-modules:/usr/src/platform/frontend/node_modules
+      - ./frontend:/usr/src/platform/frontend
+    ports:
+      - 3000:3000
+    networks:
+      - frontend
+      - platform
+    healthcheck:
+      test: ["CMD", "wget", "-c", "localhost:3000", "-O", "/dev/null"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  mssql:
+    restart: always
+    container_name: octta-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA="Y"
+      - SA_PASSWORD=TheSmallOfficeInClevelancStreet90a
+      - MSSQL_PID=Express
+    volumes:
+      - mssql-data:/var/opt/mssql
+    expose:
+      - 1433
+    ports:
+      - 1433:1433
+    networks:
+      - platform
+      - thirdparty
+
+  redis:
+    restart: always
+    container_name: octta-cache
+    image: bitnami/redis:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    # volumes:
+    #   - redis-data:/bitnami/redis/data
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+    networks:
+      - platform
+      - thirdparty
+
+networks:
+  admin:
+  api:
+  background:
+  frontend:
+  platform:
+  thirdparty:
+
+volumes:
+  admin-node-modules:
+  api-source-code:
+  background-source-code:
+  frontend-node-modules:
+  mssql-data:
+  redis-data:
