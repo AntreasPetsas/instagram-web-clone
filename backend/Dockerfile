@@ -29,7 +29,7 @@ LABEL maintainer="Andreas Petsas <antreasp07@gmail.com>"
 # Environment variables
 ENV REFRESHED_AT 2022-07-22
 ENV DEV_DIR="/usr/src"
-ENV APP_DIR="${DEV_DIR}/instagram-web-clone/frontend"
+ENV APP_DIR="${DEV_DIR}/instagram-web-clone/backend"
 ENV USER="node"
 ENV GROUP="node"
 
@@ -111,8 +111,8 @@ COPY --chown=${USER}:${GROUP} --from=compile-dev ${APP_DIR}/node_modules ${APP_D
 USER ${USER}
 
 # Run development mode
-EXPOSE 3000
-CMD [ "npm", "start" ]
+EXPOSE 8000
+CMD [ "npm", "run", "server" ]
 
 # --------------------------------------------------------------------
 
