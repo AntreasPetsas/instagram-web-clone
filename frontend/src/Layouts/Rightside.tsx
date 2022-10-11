@@ -2,7 +2,7 @@ import React from 'react';
 import TrendingFeeds from '../components/Sidebars/Right/TrendingFeeds';
 import Suggestions from '../components/Sidebars/Right/Suggestions';
 import ProfileActivity from '../components/Sidebars/Right/ProfileActivity';
-import "../assets/sass/sidebars/rightsidebar.scss";
+import "../assets/styles/sidebars/rightsidebar.scss";
 
 function Rightside() {
   return (

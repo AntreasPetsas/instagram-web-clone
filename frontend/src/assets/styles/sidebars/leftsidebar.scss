@@ -1,20 +1,20 @@
 #leftside-layout {
-  display: grid;
-  grid-template-rows: [rowstart] 10% [row1] 5% [row2] 15% [row3] 10% [row4] 5% [row5] 30% [rowInner] 25% [rowend];
+  // display: grid;
+  // grid-template-rows: [rowstart] 10% [row1] 5% [row2] 15% [row3] 10% [row4] 5% [row5] 30% [rowInner] 25% [rowend];
 
-	#logo{
-		grid-row-start: rowstart;
-    grid-row-end: row1;
-	}
+	// #logo{
+	// 	grid-row-start: rowstart;
+  //   grid-row-end: row1;
+	// }
 
-  #profile-details {
-    grid-row-start: row1;
-    grid-row-end: row4;
-  }
-  #leftside_menu-items {
-    grid-row-start: row4;
-    grid-row-end: rowend;
-  }
+  // #profile-details {
+  //   grid-row-start: row1;
+  //   grid-row-end: row4;
+  // }
+  // #leftside_menu-items {
+  //   grid-row-start: row4;
+  //   grid-row-end: rowend;
+  // }
 }
 
 #leftside-layout {

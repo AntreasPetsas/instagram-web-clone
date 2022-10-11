@@ -3,7 +3,7 @@ import FeedCard from "./FeedCard";
 
 function Feeds() {
   return (
-    <section id="feeds">
+    <section id="feed_posts">
       <Row>
         <Col xs={6}>
           <h2>Feeds</h2>

@@ -1,7 +1,11 @@
+import ReactDOM from 'react-dom/client';
 import {Outlet} from 'react-router-dom';
-import '../assets/sass/noauth.scss';
+import '../assets/styles/noauth.scss';
 
 function NoAuthLayout({children}:{children: any}) {
+
+    const root = document.getElementById('root')?.classList.add('noAuth')
+
     return (
         <div id="noAuth_layout">
             {children}

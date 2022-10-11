@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthLayout from "./Layouts/AuthLayout";
 import NoAuthLayout from "./Layouts/NoAuthLayout";
 import Feed from "./pages/Feed";
@@ -6,7 +6,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
 
-import "./App.css";
+import "./assets/styles/App.scss";
 
 function App() {
   return (
