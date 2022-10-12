@@ -7,7 +7,7 @@ import comment from "../../assets/images/icons/comment.png";
 import share from "../../assets/images/icons/share.png";
 import bookmark from "../../assets/images/icons/bookmark.png";
 import Comment from "./Comment";
-import "../../assets/sass/components/feedCard.scss";
+import "../../assets/styles/components/feedCard.scss";
 
 function FeedCard() {
   return (

@@ -6,7 +6,7 @@ function SearchBar() {
   return (
     <div className='headerSearch_wrapper'>
       <img src={searchIcon} width="20" height="20" alt="search icon" />
-      <label>Search</label>
+      <label style={{width: 'inherit', marginLeft: 10}}>Search</label>
       <img src={microphoneIcon} width="20" height="20" alt="microphone icon" />
     </div>
   );

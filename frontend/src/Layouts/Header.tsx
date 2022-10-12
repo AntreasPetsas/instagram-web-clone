@@ -5,7 +5,7 @@ import SearchBar from "../components/Menu/HeaderMenus/SearchBar";
 import Notifications from "../components/Menu/HeaderMenus/Notifications";
 import menuIcon from "../assets/images/icons/menu.png";
 import Direct from "../components/Menu/HeaderMenus/Direct";
-import "../assets/sass/layouts/header.scss";
+import "../assets/styles/layouts/header.scss";
 
 function Header() {
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {};
@@ -14,8 +14,8 @@ function Header() {
   // };
 
   return (
-    <div id="header-layout" className="h-100">
-      <div className="inner">
+    <div id="header-layout" >
+      <div className="inner-col-layout">
         <div id="header-layout_left" className="d-flex">
           <SearchBar />
           <CreatePost />

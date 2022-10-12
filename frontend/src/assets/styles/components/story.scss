@@ -1,10 +1,18 @@
-#feed_stories {
+#feed_stories .d-flex {
   gap: 55px;
 }
 
 .feed_story-item {
   display: flex;
   flex-direction: column;
+  &.add_story {
+    img {
+      padding: 30px;
+    }
+  }
+  &.user_story {
+  }
+
   figure {
     margin-bottom: 0;
     background: linear-gradient(
