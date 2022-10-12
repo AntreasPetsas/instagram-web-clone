@@ -5,7 +5,9 @@ import Feed from "./pages/Feed";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
-
+import "./App.css";
+import "./assets/styles/App.scss";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import "./assets/styles/App.scss";
 
 function App() {
@@ -35,6 +37,12 @@ function App() {
               <Feed id={3} name="Helloooo World" />
             </AuthLayout>
           }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <PrivacyPolicy />
+          } 
         />
         <Route
           path="*"

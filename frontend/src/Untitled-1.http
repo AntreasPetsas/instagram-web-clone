@@ -1,0 +1,13 @@
+
+POST  https://api.instagram.com/oauth/access_token
+  ?client_id=568261078390202
+  &client_secret=93137008c83b6eb77075d66bb71efc78
+  &grant_type=authorization_code
+  &redirect_uri=https://social-web-clone.web.app/
+  &code=AQAobvwHn10uUQCqNnfS9G30L-p1E25s4-ExcePkHgsF9hYAToqAR2LkeVnckmKk9wuXzDesuAY9TTFjEpakR7sDN0qXJwisLFgZOshreAgWyicntOIbBHEVPbn1JpVVGXOaeoIVrAGKihbdx5WwUFdlhBhOpafUhj5MSq7Mz68zIMd_9TvwMbAtYHCGnQwpD4O8t78EBE2SSacCeRtAWjEQqHyoytjBnB3WPbLL_6UiQQ
+
+#   https://api.instagram.com/oauth/authorize
+#   ?client_id=568261078390202
+#   &redirect_uri=https://social-web-clone.web.app/
+#   &scope=user_profile,user_media
+#   &response_type=code
