@@ -5,12 +5,14 @@ import RightSidebar from './Rightside';
 import {Outlet} from 'react-router-dom';
 import Content from './Content';
 
-function AuthLayout({children}:{children: any}) {
+
+
+function AuthLayout({HideRightSide = false, children}:{HideRightSide?: Boolean , children: any}) {
     return (
         <>
             <Header />
             <LeftSidebar />
-            <RightSidebar />
+            {!HideRightSide && <RightSidebar />}
             <Content>
                 {children}
             </Content>
