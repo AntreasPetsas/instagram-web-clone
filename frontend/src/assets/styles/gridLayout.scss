@@ -54,14 +54,19 @@
   // grid-template-rows: [rowstart] 10% [row1] 5% [row2] 15% [row3] 10% [row4] 5% [row5] 30% [rowInner] 25% [rowend];
 }
 
-#feed-content, #me-content {
+#feed-content {
   grid-column-start: col4;
   grid-column-end: col7;
 }
 
+#me-content{
+  grid-column-start: col4;
+  grid-column-end: colRootEnd;
+}
+
 #me-posts-layout{
   display: grid;
-  grid-template-columns: [post0] 33% [post1] 33% [post2] 33% [post3];
+  grid-template-columns: [post0] 25% [post1] 25% [post2] 25% [post3] 25% [post4];
   // grid-template-rows: [rowstart] 10% [row1] 5% [row2] 15% [row3] 10% [row4] 5% [row5] 30% [rowInner] 25% [rowend];  
 }
 

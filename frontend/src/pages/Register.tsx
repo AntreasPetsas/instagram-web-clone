@@ -28,6 +28,8 @@ const Register = () => {
         password: passwordRef.current.value,
       }),
     });
+
+    console.log(response);
   };
 
   return (

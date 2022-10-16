@@ -1,4 +1,3 @@
-import ReactDOM from 'react-dom/client';
 import {Outlet} from 'react-router-dom';
 import '../assets/styles/noauth.scss';
 
