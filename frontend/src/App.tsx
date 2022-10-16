@@ -47,7 +47,7 @@ function App() {
         <Route 
           path="/me"
           element={
-            <AuthLayout HideRightSide={false}>
+            <AuthLayout HideRightSide={true}>
               <Me />
             </AuthLayout>
           }

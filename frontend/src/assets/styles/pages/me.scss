@@ -1,3 +1,11 @@
 #me-posts-layout.row{
     row-gap: 20px;
 }
+
+.modal_post{
+    padding-right: 100px !important;
+    padding-left: 100px !important;
+    .modal-dialog{
+        max-width: 900px !important;
+    }
+}

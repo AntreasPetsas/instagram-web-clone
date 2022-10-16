@@ -71,7 +71,7 @@ const Me = () => {
     username : "asd",
   }
 
-  const posts: Array<PostType> = new Array<PostType>(6);
+  const posts: Array<PostType> = new Array<PostType>();
   posts.push(post1);
   posts.push(post2);
   posts.push(post3);
@@ -96,11 +96,11 @@ const Me = () => {
           </Row>
         </Col>
       </Row>
-      <Row id="me-posts-layout">
+      <div id="me-posts-layout">
         <Posts 
           posts={posts}
         />
-      </Row>
+      </div>
     </div>
   );
 };
