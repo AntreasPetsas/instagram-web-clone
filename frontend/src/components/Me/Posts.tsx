@@ -1,25 +1,25 @@
 import { PostType } from "../../types/PostTypes";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import Post from "./Post";
 
 const Posts = ({ posts }: { posts: PostType[] }) => {
-  let isDesktop: Boolean = false;
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const { innerWidth: width, innerHeight: height } = window;
+    const { innerWidth: width } = window;
 
     // width > 992 -> lg
     // width > 1200 -> xl
     // width > 1400 -> xxl
-    if (width >= 992 && width <= 1999.95) isDesktop = false;
-    else if (width >= 1200) isDesktop = true;
+    if (width >= 992 && width <= 1199.95) setIsDesktop(false);
+    else if (width >= 1200) setIsDesktop(true);
+    console.log(isDesktop)
   }, []);
 
   const handleRenderPosts = () => {
     let renderedPosts: JSX.Element[] | JSX.Element = [];
     let lenIteration: number = isDesktop ? 4 : 3;
-
     for (let i = 0; i < posts.length; i += lenIteration) {
       let iterPosts: JSX.Element[] | JSX.Element = [];
       for (let j = 0; j < lenIteration; j++) {
@@ -29,7 +29,6 @@ const Posts = ({ posts }: { posts: PostType[] }) => {
             post={posts[i + j]}
             xs={isDesktop ? 3 : 4}
             key={`post_col_${i + j}`}
-            postId = {`post_col_${i + j}`}
           />
         );
       }

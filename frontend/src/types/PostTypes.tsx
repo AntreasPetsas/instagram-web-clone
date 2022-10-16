@@ -7,4 +7,5 @@ export type PostType = {
   thumbnail_url: string;
   timestamp: Date;
   username: string;
+  childrens: Array<PostType> | null
 };

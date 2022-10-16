@@ -1,11 +1,26 @@
-#me-posts-layout.row{
-    row-gap: 20px;
+#me-posts-layout.row {
+  row-gap: 20px;
 }
 
-.modal_post{
-    padding-right: 100px !important;
-    padding-left: 100px !important;
-    .modal-dialog{
-        max-width: 900px !important;
+.me_modal_post {
+  padding-right: 100px !important;
+  padding-left: 100px !important;
+
+  .modal-dialog {
+    max-width: 900px !important;
+  }
+
+  svg.arrow {
+    position: absolute;
+    top: 50%;
+    background: gray;
+    padding: 5px 6px;
+    border-radius: 50%;
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
     }
+  }
 }
