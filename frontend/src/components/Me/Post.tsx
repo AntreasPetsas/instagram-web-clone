@@ -25,12 +25,12 @@ const Post = ({
     return <FontAwesomeIcon icon={faArrowRight} className="arrow" style={{ right: 0 }} />;
   };
 
-  const extractPosts = (): Array<string> => {
-    var imagesArray: Array<string> = new Array<string>();
-    imagesArray.push(post.media_url)
+  const extractPosts = (): Array<PostType> => {
+    var imagesArray: Array<PostType> = new Array<PostType>();
+    imagesArray.push(post)
     if(post.childrens != null){
-      Array(post.childrens).forEach((PostType)p => {
-        imagesArray.push(p.media_url)
+      post.childrens.forEach((p: PostType) => {
+        imagesArray.push(p)
       });
     }
     return imagesArray;
@@ -58,24 +58,10 @@ const Post = ({
           <Row>
             <Col xs={7} style={{position: "relative"}}>
               <>
-                {extractPosts()}
-                {handlePreviousImage()}
-                {/* <Slideshow /> */}
-                <img
-                  style={{
-                    objectFit: "contain",
-                    objectPosition: "center",
-                  }}
-                  src={post.media_url}
-                  width="500"
-                  height="500"
-                  alt={post.caption.substring(1, 20)}
+                <Slideshow 
+                  images={extractPosts()}
                 />
-                {handleNextImage()}
               </>
-            </Col>
-            <Col xs={5}>
-              <p>{post.caption}</p>
             </Col>
           </Row>
           <Button variant="transparent" onClick={handleClose} style={{position: "absolute", top: 0, right: 0}}>

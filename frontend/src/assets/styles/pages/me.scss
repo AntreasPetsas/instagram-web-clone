@@ -24,3 +24,43 @@
     }
   }
 }
+
+.disable-right{
+  .carousel-control-prev{
+    display: flex;
+  }
+  .carousel-control-next{
+    display: none;
+  }
+}
+.disable-none{
+  .carousel-control-prev{
+    display: flex;
+  }
+  .carousel-control-next{
+    display: flex;
+  }
+}
+.disable-left{
+  .carousel-control-prev{
+    display: none;
+  }
+  .carousel-control-next{
+    display: flex;
+  }
+}
+
+.carousel-control-prev span, .carousel-control-next span{
+  background-color: #808080;
+}
+
+
+.carousel-item{
+  display: flex;
+
+
+  .carousel-caption p{
+    display: white;
+    background-color: #80808080;
+  }
+}

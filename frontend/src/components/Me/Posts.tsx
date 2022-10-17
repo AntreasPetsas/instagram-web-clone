@@ -12,9 +12,8 @@ const Posts = ({ posts }: { posts: PostType[] }) => {
     // width > 992 -> lg
     // width > 1200 -> xl
     // width > 1400 -> xxl
-    if (width >= 992 && width <= 1199.95) setIsDesktop(false);
+    if (width >= 992 && width <= 1280) setIsDesktop(false);
     else if (width >= 1200) setIsDesktop(true);
-    console.log(isDesktop)
   }, []);
 
   const handleRenderPosts = () => {
