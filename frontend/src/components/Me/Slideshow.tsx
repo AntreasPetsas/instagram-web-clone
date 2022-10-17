@@ -11,9 +11,9 @@ const SlideShow = ({ images }: { images: Array<PostType> }) => {
 
   
   const handleSelect = (selectedIndex: number) => {
-    if(selectedIndex == imagesLen - 1)
+    if(selectedIndex === imagesLen - 1)
       setIndicatorDisabledClass('disable-right');
-    else if(selectedIndex == 0)
+    else if(selectedIndex === 0)
       setIndicatorDisabledClass('disable-left');
     else
       setIndicatorDisabledClass('disable-none');
