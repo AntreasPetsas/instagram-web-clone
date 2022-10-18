@@ -1,0 +1,29 @@
+.profile-icon_comment {
+  align-self: center;
+  img {
+    border-radius: 50%;
+    border: 1px solid #d3d3d377;
+  }
+}
+
+.comment_input {
+  height: 100%;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  border-radius: 32px;
+  background-color: #d3d3d3ff;
+  border: #d3d3d377;
+
+  .form-control,
+  .form-control:disabled {
+    margin-left: 6px;
+    background-color: transparent;
+    border: none;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

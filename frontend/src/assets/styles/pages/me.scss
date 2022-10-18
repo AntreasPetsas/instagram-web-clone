@@ -10,6 +10,75 @@
     max-width: 900px !important;
   }
 
+  .modal-body {
+    display: flex;
+
+    .carousel {
+      width: 100%;
+    }
+
+    .carousel-item {
+      display: none;
+      transition: none !important;
+
+      .slideshow-actions {
+        margin-top: auto; // this will push comments & actions to flex-end
+        .slideshow-actionslikes,
+        .slideshow-actionsComments,
+        .slideshow-actionsShares,
+        .slideshow-actionsSaved {
+          display: flex;
+          align-items: center;
+          label {
+            color: black;
+            margin-right: 8px;
+          }
+        }
+        .slideshow-actionslikes {
+          justify-content: flex-start;
+        }
+        .slideshow-actionsComments {
+          justify-content: center;
+        }
+        .slideshow-actionsShares {
+          justify-content: center;
+        }
+        .slideshow-actionsSaved {
+          justify-content: flex-end;
+        }
+      }
+      .slideshow-comments {
+        &.row{
+          row-gap: 25px;
+        }
+      }
+    }
+
+    .active.carousel-item {
+      display: flex;
+    }
+
+    .carousel-control-next {
+      right: 37%;
+    }
+    .carousel-control-prev{
+      left: -5%;
+    }
+    .carousel-indicators {
+      right: 42%;
+    }
+
+    .carousel-caption {
+      display: flex;
+      flex-direction: column;
+      position: inherit;
+      height: 100%;
+      padding-top: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
   svg.arrow {
     position: absolute;
     top: 50%;
@@ -25,42 +94,41 @@
   }
 }
 
-.disable-right{
-  .carousel-control-prev{
+.disable-right {
+  .carousel-control-prev {
     display: flex;
   }
-  .carousel-control-next{
+  .carousel-control-next {
     display: none;
   }
 }
-.disable-none{
-  .carousel-control-prev{
+.disable-none {
+  .carousel-control-prev {
     display: flex;
   }
-  .carousel-control-next{
+  .carousel-control-next {
     display: flex;
   }
 }
-.disable-left{
-  .carousel-control-prev{
+.disable-left {
+  .carousel-control-prev {
     display: none;
   }
-  .carousel-control-next{
+  .carousel-control-next {
     display: flex;
   }
 }
 
-.carousel-control-prev span, .carousel-control-next span{
+.carousel-control-prev span,
+.carousel-control-next span {
   background-color: #808080;
 }
 
-
-.carousel-item{
+.carousel-item {
   display: flex;
 
-
-  .carousel-caption p{
-    display: white;
-    background-color: #80808080;
+  .carousel-caption p {
+    color: black;
+    text-align: left;
   }
 }

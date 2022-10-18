@@ -64,13 +64,15 @@ function FeedCard() {
             isExists={true}
             commentText={"awesome picture"}
             image={profile}
+            profile_size={64}
           />
         </Col>
         <Col xs={12} className="d-flex">
           <Comment 
             isExists={false} 
             commentText="" 
-            image={profile} 
+            image={profile}
+            profile_size={64}
             />
         </Col>
       </Row>

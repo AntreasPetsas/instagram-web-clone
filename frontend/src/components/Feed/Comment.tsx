@@ -1,27 +1,26 @@
 import { Col, Form, Button } from "react-bootstrap";
+import { CommentProps } from "../../types/CommentProps";
 import attachment from "../../assets/images/icons/attachment.png";
 import gallery from "../../assets/images/icons/gallery.png";
 import emoji from "../../assets/images/icons/smile.png";
 import send from "../../assets/images/icons/send.png";
-
-type CommentProps = {
-  image: string;
-  isExists: boolean;
-  commentText: string;
-};
+import "../../assets/styles/components/comment.scss";
 
 const Comment = (props: CommentProps) => {
   return (
     <>
-      <Col xs={1}>
+      <Col 
+        xs={props.image_col || 1}
+        className="profile-icon_comment"
+      >
         <img
           src={props.image}
-          width="64"
-          height="64"
+          width={props.profile_size}
+          height={props.profile_size}
           alt="comment profile icon"
         />
       </Col>
-      <Col xs={11} className="feed_card-comment">
+      <Col xs={props.input_col || 11} className="comment_input">
         <Form>
           {props.isExists && (
             <Form.Group className="comment-disabled" controlId="comment">
@@ -62,4 +61,5 @@ const Comment = (props: CommentProps) => {
     </>
   );
 };
+
 export default Comment;

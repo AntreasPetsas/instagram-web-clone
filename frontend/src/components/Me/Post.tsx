@@ -17,13 +17,13 @@ const Post = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleNextImage = () => {
-    return <FontAwesomeIcon icon={faArrowLeft} className="arrow" style={{ left: 0 }} />;
-  };
+  // const handleNextImage = () => {
+  //   return <FontAwesomeIcon icon={faArrowLeft} className="arrow" style={{ left: 0 }} />;
+  // };
 
-  const handlePreviousImage = () => {
-    return <FontAwesomeIcon icon={faArrowRight} className="arrow" style={{ right: 0 }} />;
-  };
+  // const handlePreviousImage = () => {
+  //   return <FontAwesomeIcon icon={faArrowRight} className="arrow" style={{ right: 0 }} />;
+  // };
 
   const extractPosts = (): Array<PostType> => {
     var imagesArray: Array<PostType> = new Array<PostType>();
@@ -54,16 +54,16 @@ const Post = ({
         />
       </Col>
       <Modal show={show} onHide={handleClose} className="me_modal_post">
-        <Modal.Body>
-          <Row>
-            <Col xs={7} style={{position: "relative"}}>
-              <>
+        <Modal.Body >
+          {/* <Row> */}
+            {/* <Col xs={7} style={{position: "relative"}}>
+              <> */}
                 <Slideshow 
                   images={extractPosts()}
                 />
-              </>
-            </Col>
-          </Row>
+              {/* </>
+            </Col> */}
+          {/* </Row> */}
           <Button variant="transparent" onClick={handleClose} style={{position: "absolute", top: 0, right: 0}}>
             <FontAwesomeIcon icon={faCircleXmark} />
           </Button>

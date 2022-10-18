@@ -60,26 +60,4 @@
   &.row{
     row-gap: 25px;
   }
-  .feed_card-comment {
-    height: 100%;
-    padding: 7px;
-    display: flex;
-    align-items: center;
-    border-radius: 32px;
-    background-color: #d3d3d3ff;
-    border: #d3d3d377;
-
-    .form-control,
-    .form-control:disabled {
-      margin-left: 6px;
-      background-color: transparent;
-      border: none;
-    }
-
-    form {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
 }
